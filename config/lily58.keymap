@@ -19,9 +19,14 @@
             key-positions = <0 1>;
         };
 
-        toggle_ext_power {
-            bindings = <&ext_power EP_TOG>;
+        toggle_ext_on {
+            bindings = <&ext_power EP_ON>;
             key-positions = <8 9>;
+        };
+
+        ext_power_off {
+            bindings = <&ext_power EP_OFF>;
+            key-positions = <20 21>;
         };
     };
 
