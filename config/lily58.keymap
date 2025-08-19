@@ -19,7 +19,7 @@
             key-positions = <0 1>;
         };
 
-        toggle_ext_on {
+        ext_power_on {
             bindings = <&ext_power EP_ON>;
             key-positions = <8 9>;
         };
