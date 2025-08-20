@@ -22,16 +22,6 @@
             bindings = <&qm_wt>;
             key-positions = <0 1>;
         };
-
-        ext_power_on {
-            bindings = <&ext_power EP_ON>;
-            key-positions = <8 9>;
-        };
-
-        ext_power_off {
-            bindings = <&ext_power EP_OFF>;
-            key-positions = <20 21>;
-        };
     };
 
 
@@ -110,7 +100,6 @@
 
 
         raise_layer {
-            // STU = Studio unlock
             // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
             // │ F-1 │ F-2 │ F-3 │ F-4 │ F-5 │ F-6 │               │ F-7 │ F-8 │ F-9 │ F10 │ F11 │ F12 │
             // ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
