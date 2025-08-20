@@ -11,6 +11,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+
+
+
+
     combos {
         compatible = "zmk,combos";
 
@@ -30,6 +34,9 @@
         };
     };
 
+
+
+
     macros {
         qm_wt: quake_mode_windows_terminal {
             compatible = "zmk,behavior-macro";
@@ -44,6 +51,9 @@
             label = "QUAKE_MODE_WINDOWS_TERMINAL";
         };
     };
+
+
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -70,6 +80,9 @@
             >;
         };
 
+
+
+
         lower_layer {
             // AF4 = Alt + f4
             // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -93,6 +106,9 @@
             >;
         };
 
+
+
+
         raise_layer {
             // STU = Studio unlock
             // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -115,6 +131,9 @@
                                   &trans        &trans        &trans        &trans    &trans  &trans    &trans       &trans
             >;
         };
+
+
+
 
         mouse_layer {
             // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
