@@ -12,13 +12,14 @@
 &gresc {
     mods = <(MOD_LGUI|MOD_RGUI)>;
     bindings = <&kp ESC>, <&kp GRAVE>;
+
     keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 };
 
 / {
     combos { compatible = "zmk,combos"; };
 
-   macros {
+    macros {
         a0171: alt_code_open_angle_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -31,6 +32,20 @@
                 <&kp LEFT_ALT>;
 
             label = "ALT_CODE_OPEN_ANGLE_QUOTE";
+        };
+
+        a0187: alt_code_close_angle_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_CODE_CLOSE_ANGLE_QUOTE";
         };
     };
 
@@ -76,8 +91,8 @@
             bindings = <
 &kp GRAVE        &kp TILDE    &none     &kp RA(F4)  &none        &kp CAPSLOCK                                     &kp DELETE     &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &none         &kp BACKSPACE
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET                                        &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp PLUS
-&trans           &none        &none     &none       &none        &none                                            &none          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE
-&none            &none        &none     &none       &a0171       &none         &kp LOCKING_NUM    &kp SCROLLLOCK  &none          &none           &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp PIPE
+&trans           &none        &none     &none       &a0171       &a0187                                           &none          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE
+&none            &none        &none     &none       &none        &none         &kp LOCKING_NUM    &kp SCROLLLOCK  &none          &none           &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp PIPE
                                         &trans      &trans       &trans        &trans             &trans          &trans         &trans          &trans
             >;
         };
