@@ -47,6 +47,90 @@
 
             label = "ALT_CODE_CLOSE_ANGLE_QUOTE";
         };
+
+        bd_h: bd_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_H";
+        };
+
+        bd_v: bd_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_V";
+        };
+
+        bd_ul: bd_ul {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_UL";
+        };
+
+        bd_ur: bd_ur {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_UR";
+        };
+
+        bd_ll: bd_ll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_LL";
+        };
+
+        bd_lr: bd_lr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BD_LR";
+        };
     };
 
     keymap {
@@ -91,7 +175,7 @@
             bindings = <
 &kp GRAVE        &kp TILDE    &none     &kp RA(F4)  &none        &kp CAPSLOCK                                     &kp DELETE     &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &none         &kp BACKSPACE
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET                                        &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp PLUS
-&trans           &none        &none     &none       &a0171       &a0187                                           &none          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE
+&trans           &none        &none     &a0171      &a0187       &none                                            &none          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE
 &none            &none        &none     &none       &none        &none         &kp LOCKING_NUM    &kp SCROLLLOCK  &none          &none           &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp PIPE
                                         &trans      &trans       &trans        &trans             &trans          &trans         &trans          &trans
             >;
@@ -133,11 +217,11 @@
             //                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
 
             bindings = <
-&none   &none  &none  &none   &none      &none                        &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
-&none   &none  &none  &none   &none      &none                        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none         &none
-&trans  &none  &none  &none   &mkp LCLK  &mkp RCLK                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none         &none
-&none   &none  &none  &none   &none      &none      &none     &none   &none           &none           &none         &none            &none         &none
-                      &trans  &trans     &trans     &trans    &trans  &trans          &trans          &trans
+&none   &none   &bd_v  &bd_h   &none      &none                        &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
+&none   &bd_ul  &none  &bd_ur  &none      &none                        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none         &none
+&trans  &none   &none  &none   &mkp LCLK  &mkp RCLK                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none         &none
+&none   &bd_ll  &none  &bd_lr  &none      &none      &none     &none   &none           &none           &none         &none            &none         &none
+                       &trans  &trans     &trans     &trans    &trans  &trans          &trans          &trans
             >;
         };
     };
