@@ -1,1 +1,1 @@
-[Readme is here, if you want it](https://github.com/oneofthemoons/zmk-config)
+README [is here,](https://github.com/oneofthemoons/zmk-config) if you want it
