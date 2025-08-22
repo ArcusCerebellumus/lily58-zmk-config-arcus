@@ -16,271 +16,224 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
-
     macros {
         a0171: alt_code_open_angle_quote {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_1>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "ALT_CODE_OPEN_ANGLE_QUOTE";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_1>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         a0187: alt_code_close_angle_quote {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_7>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "ALT_CODE_CLOSE_ANGLE_QUOTE";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_7>
+                     , <&macro_release>, <&kp LEFT_ALT>;
         };
 
         bd_h: box_drawing_horizontal {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_6>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_HORIZONTAL";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_6>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_v: box_drawing_vertical {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_9>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_VERTICAL";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_9>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_ul: box_drawing_upper_left_corner {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_8>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_UPPER_LEFT_CORNER";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_8>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_ur: box_drawing_upper_right_corner {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_1>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_UPPER_RIGHT_CORNER";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_1>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_ll: box_drawing_lower_left_corner {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_2>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_LOWER_LEFT_CORNER";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_2>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_lr: box_drawing_lower_right_corner {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_7>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_LOWER_RIGHT_CORNER";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_7>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_cl: box_drawing_center_left_junction {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_5>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_CENTER_LEFT_JUNCTION";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_5>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_cr: box_drawing_center_right_junction {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_0>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_CENTER_RIGHT_JUNCTION";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_0>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_t: box_drawing_top_junction {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_TOP_JUNCTION";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_4>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_b: box_drawing_bottom_junction {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_3>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_BOTTOM_JUNCTION";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_3>
+                     , <&macro_release &kp LEFT_ALT>;
         };
 
         bd_c: box_drawing_center_junction {
             compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_7>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-            label = "BOX_DRAWING_CENTER_JUNCTION";
+            bindings = <&macro_press &kp LEFT_ALT>
+                     , <&macro_release &kp LEFT_ALT>;
+                     , <&macro_tap &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_7>
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        base {
-            // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-            // │ ESC │ 1 ! │ 2 @ │ 3 # │ 4 $ │ 5 % │               │ 6 ^ │ 7 & │ 8 { │ 9 } │ 0 ) │ <<< │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ TAB │ q Q │ w W │ e E │ r R │ t T │               │ y Y │ u U │ i I │ o O │ p P │ = + │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ SHF │ a A │ s S │ d D │ f F │ g G │ [ { │   │ ] } │ h H │ j J │ k K │ l L │ ; : │ ' " │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ CTL │ z Z │ x X │ c C │ v V │ b B │     │   │     │ n N │ m M │ , < │ . > │ / ? │ \ | │
-            // └─────┴─────┴─────┼─────┼─────┼─────┤ SPC │   │ ENT ├─────┼─────┼─────┼─────┴─────┴─────┘
-            //                   │ GUI │ ALT │ L_1 │     │   │     │ L_2 │ L_3 │ CTL │
-            //                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
 
-            bindings = <
+
+        /// ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+        /// │ ES` │ 1 ! │ 2 @ │ 3 # │ 4 $ │ 5 % │               │ 6 ^ │ 7 & │ 8 { │ 9 } │ 0 ) │ <<< │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │ TAB │ q Q │ w W │ e E │ r R │ t T │               │ y Y │ u U │ i I │ o O │ p P │ = + │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │ SHF │ a A │ s S │ d D │ f F │ g G │ [ { │   │ ] } │ h H │ j J │ k K │ l L │ ; : │ ' " │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │ CTL │ z Z │ x X │ c C │ v V │ b B │     │   │     │ n N │ m M │ , < │ . > │ / ? │ \ | │
+        /// └─────┴─────┴─────┼─────┼─────┼─────┤ SPC │   │ ENT ├─────┼─────┼─────┼─────┴─────┴─────┘
+        ///                   │ GUI │ ALT │ L_1 │     │   │     │ L_2 │ L_3 │ CTL │
+        ///                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
+        base { bindings = <
 &gresc            &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                         &kp N6  &kp N7  &kp N8             &kp N9   &kp N0    &kp BACKSPACE
 &kp TAB           &kp Q   &kp W   &kp E         &kp R         &kp T                          &kp Y   &kp U   &kp I              &kp O    &kp P     &kp EQUAL
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D         &kp F         &kp G                          &kp H   &kp J   &kp K              &kp L    &kp SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M   &kp COMMA          &kp DOT  &kp FSLH  &kp BACKSLASH
-                                  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp RET   &mo 2   &mo 3   &kp RIGHT_CONTROL
-            >;
+                                  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp RET   &mo 2   &mo 3   &kp RIGHT_CONTROL  >;
         };
 
-        lower_layer {
-            // AF4 = Alt + F4
-            // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-            // │ ` ~ │  ~  │     │ AF4 │     │ CAP │               │ DEL │     │  {  │  }  │     │ <<< │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │  @  │  #  │  $  │  %  │  ^  │               │  &  │  *  │  (  │  )  │ - _ │  +  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │     │     │  «  │  »  │     │ NML │   │ SCL │     │  _  │ [ { │ ] } │  :  │ ' " │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │     │     │     │     │     │     │   │     │     │     │  <  │  >  │  ?  │  |  │
-            // └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
-            //                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
-            //                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
 
-            bindings = <
+
+        /// AF4 = Alt + F4
+        /// ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+        /// │ ` ~ │  ~  │     │ AF4 │     │ CAP │               │ DEL │     │  {  │  }  │     │ <<< │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │  @  │  #  │  $  │  %  │  ^  │               │  &  │  *  │  (  │  )  │ - _ │  +  │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │     │     │  «  │  »  │     │ NML │   │ SCL │     │  _  │ [ { │ ] } │  :  │ ' " │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │     │     │     │     │     │     │   │     │     │     │  <  │  >  │  ?  │  |  │
+        /// └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
+        ///                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
+        ///                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
+        symbols { bindings = <
 &kp GRAVE        &kp TILDE    &none     &kp RA(F4)  &none        &kp CAPSLOCK                                     &kp DELETE     &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &none         &kp BACKSPACE
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET                                        &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp PLUS
 &trans           &none        &none     &a0171      &a0187       &none                                            &none          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE
 &none            &none        &none     &none       &none        &none         &kp LOCKING_NUM    &kp SCROLLLOCK  &none          &none           &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION  &kp PIPE
-                                        &trans      &trans       &trans        &trans             &trans          &trans         &trans          &trans
-            >;
+                                        &trans      &trans       &trans        &trans             &trans          &trans         &trans          &trans                >;
         };
 
-        raise_layer {
-            // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-            // │ F-1 │ F-2 │ F-3 │ F-4 │ F-5 │ F-6 │               │ F-7 │ F-8 │ F-9 │ F10 │ F11 │ F12 │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │  ┌  │  ┬  │  ┐  │     │     │               │ HOM │ PUP │ PDN │ END │     │  +  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │  ├  │  ┼  │  ┤  │  ─  │  │  │     │   │     │ LFT │ DWN │  UP │ RGH │     │  -  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │  └  │  ┴  │  ┘  │     │     │     │   │     │     │     │     │     │     │     │
-            // └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
-            //                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
-            //                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
 
-            bindings = <
+
+        /// ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+        /// │ F-1 │ F-2 │ F-3 │ F-4 │ F-5 │ F-6 │               │ F-7 │ F-8 │ F-9 │ F10 │ F11 │ F12 │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │  ┌  │  ┬  │  ┐  │     │     │               │ HOM │ PUP │ PDN │ END │     │  +  │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │  ├  │  ┼  │  ┤  │  ─  │  │  │     │   │     │ LFT │ DWN │  UP │ RGH │     │  -  │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │  └  │  ┴  │  ┘  │     │     │     │   │     │     │     │     │     │     │     │
+        /// └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
+        ///                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
+        ///                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
+        movement { bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7    &kp F8       &kp F9         &kp F10    &kp F11  &kp F12
 &trans  &bd_ul  &bd_t   &bd_ur  &none   &none                     &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none    &kp KP_PLUS
 &trans  &bd_cl  &bd_c   &bd_cr  &bd_h   &bd_v                     &kp LEFT  &kp DOWN     &kp UP         &kp RIGHT  &none    &kp KP_MINUS
 &trans  &bd_ll  &bd_b   &bd_lr  &none   &none   &none     &none   &none     &none        &none          &none      &none    &none
-                        &trans  &trans  &trans  &trans    &trans  &trans    &trans       &trans
-            >;
+                        &trans  &trans  &trans  &trans    &trans  &trans    &trans       &trans         >;
         };
 
-        mouse_layer {
-            // ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-            // │     │     │     │     │     │     │               │ CLR │ B-0 │ B-1 │ B-2 │ B-3 │ B-4 │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │     │     │     │     │     │               │ W_L │ W_D │ W_U │ W_R │     │     │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │     │     │     │ LMB │ RMB │     │   │     │ M_U │ M_D │ M_U │ M_R │     │     │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  ▼  │     │     │     │     │     │     │   │     │     │     │     │     │     │     │
-            // └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
-            //                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
-            //                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
 
-            bindings = <
+
+        /// ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+        /// │     │     │     │     │     │     │               │ CLR │ B-0 │ B-1 │ B-2 │ B-3 │ B-4 │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │     │     │     │     │     │               │ W_L │ W_D │ W_U │ W_R │     │     │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │     │     │     │ LMB │ RMB │     │   │     │ M_U │ M_D │ M_U │ M_R │     │     │
+        /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+        /// │  ▼  │     │     │     │     │     │     │   │     │     │     │     │     │     │     │
+        /// └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
+        ///                   │  ▼  │  ▼  │  ▼  │     │   │     │  ▼  │  ▼  │  ▼  │
+        ///                   └─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┘
+        mouse { bindings = <
 &none   &none  &none  &none   &none      &none                        &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
 &none   &none  &none  &none   &none      &none                        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none         &none
 &trans  &none  &none  &none   &mkp LCLK  &mkp RCLK                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none         &none
 &none   &none  &none  &none   &none      &none      &none     &none   &none           &none           &none         &none            &none         &none
-                      &trans  &trans     &trans     &trans    &trans  &trans          &trans          &trans
-            >;
+                      &trans  &trans     &trans     &trans    &trans  &trans          &trans          &trans        >;
         };
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
