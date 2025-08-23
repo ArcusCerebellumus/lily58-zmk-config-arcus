@@ -21,6 +21,18 @@
 
 / {
     macros {
+        smile: alt_code_for_a_simple_smile {
+            compatible = "zmk,behavior-macro";
+            tap-ms = <10>;
+            wait-ms = <10>;
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp KP_N2>
+                     , <&macro_release &kp LALT>
+                     ;
+
+        };
+
         a0171: alt_code_open_angle_quote {
             compatible = "zmk,behavior-macro";
             tap-ms = <10>;
@@ -199,7 +211,7 @@
         /// ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
         /// │  ▼  │  @  │  #  │  $  │  %  │  ^  │               │  &  │  *  │  (  │  )  │ - _ │  +  │
         /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-        /// │  ▼  │     │     │  «  │  »  │     │ NML │   │ SCL │     │  _  │ [ { │ ] } │  :  │ ' " │
+        /// │  ▼  │     │     │  «  │  »  │  ☻  │ NML │   │ SCL │     │  _  │ [ { │ ] } │  :  │ ' " │
         /// ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
         /// │  ▼  │     │     │     │     │     │     │   │     │     │     │  <  │  >  │  ?  │  |  │
         /// └─────┴─────┴─────┼─────┼─────┼─────┤  ▼  │   │  ▼  ├─────┼─────┼─────┼─────┴─────┴─────┘
@@ -209,7 +221,7 @@
             bindings = <
                 &kp GRAVE  &kp TILDE  &none     &kp RA(F4)  &none      &kp CAPS                          &kp DEL   &none      &kp LBRC  &kp RBRC  &none      &kp BSPC
                 &kp EXCL   &kp AT     &kp HASH  &kp DOLLAR  &kp PRCNT  &kp CARET                         &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &kp MINUS  &kp PLUS
-                &trans     &none      &none     &a0171      &a0187     &none                             &none     &kp UNDER  &kp LBKT  &kp RBKT  &kp COLON  &kp SQT
+                &trans     &none      &none     &a0171      &a0187     &smile                            &none     &kp UNDER  &kp LBKT  &kp RBKT  &kp COLON  &kp SQT
                 &none      &none      &none     &none       &none      &none      &kp LNLCK    &kp SLCK  &none     &none      &kp LT    &kp GT    &kp QMARK  &kp PIPE
                                                 &trans      &trans     &trans     &trans       &trans    &trans    &trans     &trans
             >;
